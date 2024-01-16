@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Network infrastructure monitoring :: Monitoring network infrastructure</title>
+    <title>Network Infrastructure Monitoring :: Monitoring network infrastructure</title>
 
     
-    <link href="/css/nucleus.css?1701086541" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701086541" rel="stylesheet">
-    <link href="/css/hybrid.css?1701086541" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701086541" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701086541" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701086541" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701086541" rel="stylesheet">
-    <link href="/css/theme.css?1701086541" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701086541" rel="stylesheet">
+    <link href="/css/nucleus.css?1705394553" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1705394553" rel="stylesheet">
+    <link href="/css/hybrid.css?1705394553" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1705394553" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1705394553" rel="stylesheet">
+    <link href="/css/auto-complete.css?1705394553" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1705394553" rel="stylesheet">
+    <link href="/css/theme.css?1705394553" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1705394553" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701086541" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1705394553" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701086541"></script>
+    <script src="/js/jquery-3.3.1.min.js?1705394553"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701086541"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701086541"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1705394553"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1705394553"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701086541"></script>
+<script type="text/javascript" src="/js/search.js?1705394553"></script>
 
     
   </div>
@@ -88,7 +88,7 @@
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+          <b> 1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -114,7 +114,7 @@
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation
+          <b> 2. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -140,7 +140,7 @@
         
         ">
       <a href="/3-createvpcflowlogs/">
-           <b> 3. </b> Create VPC Flow Logs
+          <b>3.</b>Create VPC Flow Logs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -166,7 +166,7 @@
         
         ">
       <a href="/4-enablevpcflowlogs/">
-           <b> 4. </b> Enable VPC Flow Logs
+          <b>4.</b>Enable VPC Flow Logs
           
             <i class="fas fa-check read-icon"></i>
           
@@ -186,13 +186,13 @@
  
   
     
-    <li data-nav-id="/5-monitoring/" title="Network infrastructure monitoring" class="dd-item 
+    <li data-nav-id="/5-monitoring/" title="Network Infrastructure Monitoring" class="dd-item 
         parent
         active
         
         ">
       <a href="/5-monitoring/">
-           <b> 5. </b> Network infrastructure monitoring
+          <b>5.</b>Network Infrastructure Monitoring
           
             <i class="fas fa-check read-icon"></i>
           
@@ -218,7 +218,7 @@
         
         ">
       <a href="/6-cleanup/">
-           <b> 6. </b> Clean up resources
+          <b> 6. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -321,7 +321,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>16-01-2024</font></i>
     </left>
     <left>
         <br>
@@ -367,7 +367,7 @@
             
           
           
-            <a href='/'>Monitoring network infrastructure</a> > Network infrastructure monitoring
+            <a href='/'>Monitoring network infrastructure</a> > Network Infrastructure Monitoring
           
         
           
@@ -402,7 +402,7 @@
           
             <h1>
               
-              Network infrastructure monitoring
+              Network Infrastructure Monitoring
             </h1>
           
 
@@ -410,8 +410,8 @@
 
 
 
-	<h4 id="network-infrastructure-monitoring">Network infrastructure monitoring</h4>
-<p>After deploying the network infrastructure and activating VPC Flow Logs. We&rsquo;ll start monitoring the infrastructure.</p>
+	<h4 id="network-infrastructure-monitoring">Network Infrastructure Monitoring</h4>
+<p>After deploying the network infrastructure and activating VPC Flow Logs, we&rsquo;ll start monitoring the infrastructure.</p>
 <ol>
 <li>
 <p>Access to <strong>AWS CloudWatch</strong></p>
@@ -419,24 +419,20 @@
 <li>Select <strong>Log groups</strong></li>
 <li>Select <strong>VPCFlowLogGroup</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/3/0001.png?featherlight=false&amp;width=90pc" alt="Network Monitoring"></p>
-<ol start="2">
+</li>
 <li>
 <p>In the <strong>VPCFlowLogGroup</strong> interface</p>
 <ul>
 <li>Select <strong>Log streams</strong></li>
 <li>We will see a log stream created about ENI</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/3/0002.png?featherlight=false&amp;width=90pc" alt="Network Monitoring"></p>
-<ol start="3">
-<li>Access the log stream to view the details of Log events.</li>
-</ol>
+</li>
+<li>
+<p>Access the log stream to view the details of Log events.</p>
 <p><img src="/images/3/0003.png?featherlight=false&amp;width=90pc" alt="Network Monitoring"></p>
-<ol start="4">
+</li>
 <li>
 <p>Return to <strong>CloudWatch</strong> interface</p>
 <ul>
@@ -444,10 +440,10 @@
 <li>Execute <strong>Run query</strong></li>
 <li>Then observe the log</li>
 </ul>
+<p><img src="/images/3/0004.png?featherlight=false&amp;width=90pc" alt="Network Monitoring"></p>
 </li>
 </ol>
-<p><img src="/images/3/0004.png?featherlight=false&amp;width=90pc" alt="Network Monitoring"></p>
-<p>So we have set up basic network infrastructure monitoring. Hope this lab will help you better understand the features of <strong>VPC Flow Logs</strong></p>
+<p>So we have set up basic network infrastructure monitoring. This lab is intended to help you better understand the features of <strong>VPC Flow Logs</strong>.</p>
 
 
 
@@ -608,19 +604,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701086541"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701086541"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701086541"></script>
-    <script src="/js/jquery.sticky.js?1701086541"></script>
-    <script src="/js/featherlight.min.js?1701086541"></script>
-    <script src="/js/highlight.pack.js?1701086541"></script>
+    <script src="/js/clipboard.min.js?1705394553"></script>
+    <script src="/js/perfect-scrollbar.min.js?1705394553"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1705394553"></script>
+    <script src="/js/jquery.sticky.js?1705394553"></script>
+    <script src="/js/featherlight.min.js?1705394553"></script>
+    <script src="/js/highlight.pack.js?1705394553"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701086541"></script>
-    <script src="/js/learn.js?1701086541"></script>
-    <script src="/js/hugo-learn.js?1701086541"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1705394553"></script>
+    <script src="/js/learn.js?1705394553"></script>
+    <script src="/js/hugo-learn.js?1705394553"></script>
 
-    <link href="/mermaid/mermaid.css?1701086541" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701086541"></script>
+    <link href="/mermaid/mermaid.css?1705394553" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1705394553"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

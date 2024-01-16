@@ -18,28 +18,28 @@
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Các bước chuẩn bị Để thực hiện triển khai hạ tầng cho bài lab này, chúng ta sẽ sử dụng CloudFormation template\n  Đăng nhập vào AWS Management Console\n Tìm CloudFormation Chọn CloudFormation     Trong giao diện CloudFormation\n Chọn Create stack Chọn With new resources     Trong giao diện Create stack\n Chọn Template is ready Chọn Upload a template file Chọn vpc-template.yml Chọn Next     Đối với Stack name , nhập VPC\n Chọn Next    Chọn Next  Chọn Create stack  Tạo Stack thành công.  "
+	"content": "Các bước chuẩn bị Để thực hiện triển khai hạ tầng cho bài lab này, chúng ta sẽ sử dụng CloudFormation template\n  Đăng nhập vào AWS Management Console\n Tìm CloudFormation Chọn CloudFormation    Trong giao diện CloudFormation\n Chọn Create stack Chọn With new resources    Trong giao diện Create stack\n Chọn Template is ready Chọn Upload a template file Chọn vpc-template.yml Chọn Next    Đối với Stack name, nhập VPC\n Chọn Next    Chọn Next\n  Chọn Create stack\n  Tạo Stack thành công.\n  "
 },
 {
 	"uri": "/vi/3-createvpcflowlogs/",
-	"title": "Tạo VPC Flow Logs",
+	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Tạo VPC Flow Logs VPC Flow Logs là một tính năng cho phép bạn giám sát thông tin về lưu lượng IP đến và đi từ các giao diện mạng trong VPC của bạn. Dữ liệu nhật ký luồng có thể được xuất bản lên Amazon CloudWatch Logs hoặc Amazon S3. Sau khi tạo nhật ký luồng, bạn có thể truy xuất và xem dữ liệu của nó ở điểm đến đã chọn.\nNhật ký luồng có thể giúp bạn thực hiện một số tác vụ, chẳng hạn như:\n Chẩn đoán các quy tắc security group quá hạn chế Theo dõi lưu lượng truy cập đến EC2 instance của bạn Xác định hướng của lưu lượng truy cập đến và đi từ các giao diện mạng Dữ liệu nhật ký luồng được thu thập bên ngoài đường dẫn lưu lượng mạng của bạn và do đó không ảnh hưởng đến lưu lượng hoặc độ trễ của mạng. Bạn có thể tạo hoặc xóa nhật ký luồng mà không có bất kỳ nguy cơ ảnh hưởng nào đến hiệu suất mạng.  Trong lab này, dữ liệu Luồng sẽ được xuất bản lên Amazon CloudWatch Logs.\nSử dụng CloudFormation để triển khai hạ tầng  Tạo IAM Role để sử dụng đẩy flow logs lên cloudwatch Cloud Watch Log Group, flow log sẽ được đẩy lên group này. EC2 instance, sử dụng để kiểm tra lưu lượng    Chúng ta phải chuẩn bị\n Tải file VPC-Flow-Logs-Lab.yaml Truy cập vào AWS Management Console, tìm CloudFormation Chọn CloudFormation     Trong giao diện AWS CloudFormation\n Chọn Create stack Chọn With new resources     Trong giao diện Create stack\n Chọn Template is ready Chọn Upload a template file Chọn Choose file Chọn file yaml đã tải về. Chọn Next     Trong giao diện Specify stack details\n Nhập Network-Monitoring Đối với các Parameters, chọn VPC đã tạo Chọn Public subnet đã tạo Chọn Next    Chọn Next  Chọn Create stack  Hoàn thành tạo stack  Truy cập vào giao diện EC2, kiểm tra đã tạo ra 1 EC2 instance.  Sử dụng Public IPv4 DNS truy cập.  "
+	"content": "Các bước chuẩn bị Để thực hiện triển khai hạ tầng cho bài lab này, chúng ta sẽ sử dụng CloudFormation template\n  Đăng nhập vào AWS Management Console\n Tìm CloudFormation Chọn CloudFormation    Trong giao diện CloudFormation\n Chọn Create stack Chọn With new resources    Trong giao diện Create stack\n Chọn Template is ready Chọn Upload a template file Chọn vpc-template.yml Chọn Next    Đối với Stack name, nhập VPC\n Chọn Next    Chọn Next\n  Chọn Create stack\n  Tạo Stack thành công.\n  "
 },
 {
 	"uri": "/vi/4-enablevpcflowlogs/",
 	"title": "Kích hoạt VPC Flow Logs",
 	"tags": [],
 	"description": "",
-	"content": "Kích hoạt VPC Flow Logs   Truy cập vào giao diện VPC\n Chọn VPC đã chuẩn bị Chọn Flow logs Chọn Create flow log     Trong giao diện Create flow log\n Thực hiện cấu hình đối với Filter, chọn All Chọn Maximum aggregation interval là 10 minutes Destination chọn Send to CloudWatch Logs     Tiếp tục cấu hình\n Destination log group, chọn VPCFlowLogGroup đã tạo từ CloudFormation IAM Role chọn RoleForVPCFlowLogs đã tạo từ CloudFormation Log record formation, chọn AWS default format Chọn Create flow log    Hoàn thành tạo VPC Flow Logs  "
+	"content": "Kích hoạt VPC Flow Logs   Truy cập vào giao diện VPC\n Chọn VPC đã chuẩn bị Chọn Flow logs Chọn Create flow log    Trong giao diện Create flow log\n Thực hiện cấu hình đối với Filter, chọn All Chọn Maximum aggregation interval là 10 minutes Destination chọn Send to CloudWatch Logs    Tiếp tục cấu hình\n Destination log group, chọn VPCFlowLogGroup đã tạo từ CloudFormation IAM Role chọn RoleForVPCFlowLogs đã tạo từ CloudFormation Log record formation, chọn AWS default format Chọn Create flow log    Hoàn thành tạo VPC Flow Logs\n  "
 },
 {
 	"uri": "/vi/5-monitoring/",
 	"title": "Giám sát hạ tầng mạng",
 	"tags": [],
 	"description": "",
-	"content": "Giám sát hạ tầng mạng Sau khi đã triển khai hạ tầng mạng và kích hoạt VPC Flow Logs. Chúng ta sẽ bắt đầu giám sát hạ tầng thôi.\n  Truy cập vào AWS CloudWatch\n Chọn Log groups Chọn VPCFlowLogGroup     Trong giao diện VPCFlowLogGroup\n Chọn Log streams Chúng ta sẽ thấy có log stream được tạo về ENI    Truy cập vào trong log stream vào xem chi tiết Log events.   Quay lại giao diện CloudWatch\n Chọn Log Insights Thực hiện Run query Sau đó quan sát log    Vậy là chúng ta đã thiết lập giám sát hạ tầng mạng cơ bản. Mong rằng bài lab này sẽ giúp các bạn hiểu rõ hơn về tính năng của VPC Flow Logs\n"
+	"content": "Giám sát hạ tầng mạng Sau khi đã triển khai hạ tầng mạng và kích hoạt VPC Flow Logs, chúng ta sẽ bắt đầu giám sát hạ tầng.\n  Truy cập vào AWS CloudWatch:\n Chọn Log groups. Chọn VPCFlowLogGroup.    Trong giao diện VPCFlowLogGroup:\n Chọn Log streams. Chúng ta sẽ thấy có log stream được tạo về ENI.    Truy cập vào trong log stream để xem chi tiết Log events.\n  Quay lại giao diện CloudWatch:\n Chọn Log Insights. Thực hiện Run query. Sau đó quan sát log.    Vậy là chúng ta đã thiết lập giám sát hạ tầng mạng cơ bản. Mong rằng bài lab này sẽ giúp các bạn hiểu rõ hơn về tính năng của VPC Flow Logs.\n"
 },
 {
 	"uri": "/vi/6-cleanup/",
